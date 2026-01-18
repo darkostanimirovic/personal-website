@@ -73,7 +73,7 @@ export default function Home() {
                 <li className="flex items-start gap-2">
                   <span className="text-[#ccc] text-[8px] pt-[4px]">▪</span>
                   <span>
-                    Building his own <b>Agentic Framework</b> in <b>Go</b>
+                    Building <a href="/meanwhile" className="text-[#003366] hover:underline font-bold">Meanwhile</a> - His own <b>Agentic Framework</b> in <b>Go</b>
                   </span>
                 </li>
                 <li className="flex items-start gap-2">
@@ -147,10 +147,10 @@ export default function Home() {
               </ul>
               <div className="flex justify-between items-center mt-auto pt-2">
                 <a
-                  href="#"
+                  href="/meanwhile"
                   className="text-[11px] text-[#cc0000] font-bold flex items-center hover:underline"
                 >
-                  <span className="text-[9px] mr-1">▶</span> More Info
+                  <span className="text-[9px] mr-1">▶</span> Meanwhile Info
                 </a>
                 <a
                   href="https://linkedin.com/in/darko-stanimirovic"
@@ -202,10 +202,10 @@ export default function Home() {
               </ul>
               <div className="flex justify-between items-center mt-auto pt-6">
                 <a
-                  href="#"
+                  href="/meanwhile"
                   className="text-[11px] text-[#cc0000] font-bold flex items-center hover:underline"
                 >
-                  <span className="text-[9px] mr-1">▶</span> More Info
+                  <span className="text-[9px] mr-1">▶</span> Meanwhile Info
                 </a>
                 <a
                   href="mailto:darko.stanimirovic@gmail.com"
