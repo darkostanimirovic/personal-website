@@ -6,23 +6,23 @@ export default function Home() {
         <div className="p-4 flex justify-between items-end bg-gradient-to-b from-white to-[#f8f8f8]">
           <div className="flex items-center gap-2">
             {/* Logo-ish graphic */}
-            <div className="relative">
-              <div className="flex">
+            <a href="/" className="relative">
+              <div className="flex items-center">
                 <div className="bg-[#003366] w-8 h-8 rounded-sm transform -skew-x-12 mr-1"></div>
-                <span className="font-bold text-4xl tracking-tighter text-[#333]">
+                <span className="font-bold text-4xl tracking-tighter text-[#333] hover:text-[#cc0000] transition-colors">
                   DARKO
                 </span>
               </div>
-            </div>
+            </a>
           </div>
           <div className="flex flex-col items-end">
             <div className="text-[#003366] text-[11px] font-bold mb-1 space-x-2">
-              <a href="#" className="hover:underline">
-                My Profile
+              <a href="/what-i-write" className="hover:underline">
+                What I Write
               </a>
               <span className="text-gray-300">|</span>
-              <a href="#" className="hover:underline">
-                Help
+              <a href="/meanwhile" className="hover:underline">
+                Meanwhile
               </a>
               <span className="text-gray-300">|</span>
               <a
@@ -67,19 +67,26 @@ export default function Home() {
             {/* Content Side */}
             <div className="w-[40%] p-5 bg-white flex flex-col justify-center">
               <h2 className="text-xl font-bold text-[#333] mb-4 leading-tight">
-                Darko's Stack Includes
+                Current Projects
               </h2>
               <ul className="space-y-2 text-[12px] text-[#444] font-bold">
                 <li className="flex items-start gap-2">
                   <span className="text-[#ccc] text-[8px] pt-[4px]">▪</span>
                   <span>
-                    Building <a href="/meanwhile" className="text-[#003366] hover:underline font-bold">Meanwhile</a> - His own <b>Agentic Framework</b> in <b>Go</b>
+                    Building{" "}
+                    <a
+                      href="/meanwhile"
+                      className="text-[#003366] hover:underline font-bold"
+                    >
+                      Meanwhile
+                    </a>{" "}
+                    - The missing piece for <b>truly collaborative AI</b>
                   </span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-[#ccc] text-[8px] pt-[4px]">▪</span>
                   <span>
-                    Building <b>Design Studio AI Agent</b>
+                    Building <b>AI Design Studio</b>
                   </span>
                 </li>
                 <li className="flex items-start gap-2">
@@ -237,12 +244,12 @@ export default function Home() {
               My LinkedIn
             </a>
             <span className="text-gray-400">|</span>
-            <a href="#" className="hover:underline">
-              My Account
+            <a href="/what-i-write" className="hover:underline">
+              What I Write
             </a>
             <span className="text-gray-400">|</span>
-            <a href="#" className="hover:underline">
-              Our Services
+            <a href="/meanwhile" className="hover:underline">
+              Meanwhile
             </a>
             <span className="text-gray-400">|</span>
             <a href="#" className="hover:underline">

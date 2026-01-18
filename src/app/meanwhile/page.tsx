@@ -10,14 +10,14 @@ export default function Meanwhile() {
         {/* Header */}
         <div className="p-4 flex justify-between items-end bg-gradient-to-b from-white to-[#f8f8f8]">
           <div className="flex items-center gap-2">
-            <div className="relative">
-              <div className="flex">
+            <a href="/" className="relative">
+              <div className="flex items-center">
                 <div className="bg-[#003366] w-8 h-8 rounded-sm transform -skew-x-12 mr-1"></div>
-                <span className="font-bold text-4xl tracking-tighter text-[#333]">
+                <span className="font-bold text-4xl tracking-tighter text-[#333] hover:text-[#cc0000] transition-colors">
                   DARKO
                 </span>
               </div>
-            </div>
+            </a>
           </div>
           <div className="flex flex-col items-end">
             <div className="text-[#003366] text-[11px] font-bold mb-1 space-x-2">
@@ -25,8 +25,8 @@ export default function Meanwhile() {
                 Home
               </a>
               <span className="text-gray-300">|</span>
-              <a href="#" className="hover:underline">
-                Help
+              <a href="/what-i-write" className="hover:underline">
+                What I Write
               </a>
               <span className="text-gray-300">|</span>
               <a
@@ -48,8 +48,7 @@ export default function Meanwhile() {
             Meanwhile Enterprise Solutions
           </span>
           <span className="text-sm text-[#333]">
-            Call Sales:{" "}
-            <span className="font-bold">1-800-AGENTS</span>
+            Call Sales: <span className="font-bold">1-800-AGENTS</span>
           </span>
         </div>
 
@@ -64,7 +63,7 @@ export default function Meanwhile() {
                 NOW SHIPPING: Meanwhile Framework
               </div>
               <div className="text-[11px] opacity-90 mt-1">
-                The Industry's Leading Multi-Agent Collaboration Platform
+                The Industry's Future Leading Multi-Agent Collaboration Platform
               </div>
             </div>
             <div className="animate-pulse">
@@ -97,10 +96,13 @@ export default function Meanwhile() {
                 🚀 THE MISSING PIECE IS HERE! 🚀
               </div>
               <div className="text-sm text-[#555] leading-relaxed">
-                <span className="font-bold text-[#cc0000]">Finally!</span> Automate complex, 
-                multi-domain work with AI agents that actually <span className="italic">work together</span>.
+                <span className="font-bold text-[#cc0000]">Finally!</span>{" "}
+                Automate complex, multi-domain work with AI agents that actually{" "}
+                <span className="italic">work together</span>.
                 <br />
-                <span className="font-bold">Integrate Multiple Perspectives. Arrive at Better Decisions.</span>
+                <span className="font-bold">
+                  Integrate Multiple Perspectives. Arrive at Better Decisions.
+                </span>
                 <br />
                 <span className="bg-[#003366] text-white px-2 py-1 text-[11px] inline-block mt-2 font-bold tracking-wide">
                   🎯 EARLY BIRD ACCESS AVAILABLE SOON!
@@ -114,40 +116,43 @@ export default function Meanwhile() {
             {/* Left Column */}
             <div className="border border-[#ccc] bg-[#f9f9f9]">
               <div className="bg-gradient-to-b from-[#ddd] to-[#ccc] border-b border-[#999] p-2">
-                <h3 className="font-bold text-sm text-[#333]">
-                  KEY BENEFITS
-                </h3>
+                <h3 className="font-bold text-sm text-[#333]">KEY BENEFITS</h3>
               </div>
               <div className="p-3">
                 <ul className="space-y-2 text-[11px] text-[#333]">
                   <li className="flex items-start gap-2">
                     <span className="text-[#cc0000] font-bold">✓</span>
                     <span>
-                      <b>Protocol-First Architecture</b> - Not a pipeline, a workplace
+                      <b>Protocol-First Architecture</b> - Not a pipeline, a
+                      workplace
                     </span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[#cc0000] font-bold">✓</span>
                     <span>
-                      <b>Human Collaboration Patterns</b> - Brainstorm, debate, consensus
+                      <b>Human Collaboration Patterns</b> - Brainstorm, debate,
+                      consensus
                     </span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[#cc0000] font-bold">✓</span>
                     <span>
-                      <b>Ergonomic Builder APIs</b> - Fluent interfaces for rapid development
+                      <b>Ergonomic Builder APIs</b> - Fluent interfaces for
+                      rapid development
                     </span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[#cc0000] font-bold">✓</span>
                     <span>
-                      <b>Type-Safe Tool Construction</b> - Go structs with auto-schema
+                      <b>Type-Safe Tool Construction</b> - Go structs with
+                      auto-schema
                     </span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[#cc0000] font-bold">✓</span>
                     <span>
-                      <b>Workplace-Themed Logging</b> - Logs read like office memos
+                      <b>Workplace-Themed Logging</b> - Logs read like office
+                      memos
                     </span>
                   </li>
                 </ul>
@@ -211,18 +216,19 @@ export default function Meanwhile() {
             </h3>
             <div className="text-[12px] text-[#444] leading-relaxed space-y-2">
               <p>
-                <b>Most frameworks model execution flow.</b> Meanwhile models human collaboration. 
-                Instead of asking "which agent runs next?", we ask "what kind of collaboration is 
-                happening right now?"
+                <b>Most frameworks model execution flow.</b> Meanwhile models
+                human collaboration. Instead of asking "which agent runs next?",
+                we ask "what kind of collaboration is happening right now?"
               </p>
               <p>
-                Built for <b>open-ended reasoning</b>—research, strategy, design critique, and 
-                sense-making—not rigid workflows. The core is intentionally minimal, with 
-                collaboration modes living in protocols that evolve independently.
+                Built for <b>open-ended reasoning</b>—research, strategy, design
+                critique, and sense-making—not rigid workflows. The core is
+                intentionally minimal, with collaboration modes living in
+                protocols that evolve independently.
               </p>
               <p className="italic text-[#666]">
-                Meanwhile... agents collaborate naturally, logs read like workplace memos, 
-                and protocols feel like office dynamics. ✨
+                Meanwhile... agents collaborate naturally, logs read like
+                workplace memos, and protocols feel like office dynamics. ✨
               </p>
             </div>
           </div>
@@ -234,45 +240,45 @@ export default function Meanwhile() {
                 COLLABORATION EXAMPLES
               </span>
             </div>
-            
+
             {/* Tabs */}
             <div className="flex border-b-2 border-[#003366] bg-[#ddd]">
               <button
-                onClick={() => setActiveTab('consensus')}
+                onClick={() => setActiveTab("consensus")}
                 className={`px-4 py-2 text-[11px] font-bold border-r border-[#999] transition-colors ${
-                  activeTab === 'consensus'
-                    ? 'bg-white text-[#003366] border-b-2 border-white -mb-[2px]'
-                    : 'bg-[#ccc] text-[#666] hover:bg-[#e0e0e0]'
+                  activeTab === "consensus"
+                    ? "bg-white text-[#003366] border-b-2 border-white -mb-[2px]"
+                    : "bg-[#ccc] text-[#666] hover:bg-[#e0e0e0]"
                 }`}
               >
                 CONSENSUS
               </button>
               <button
-                onClick={() => setActiveTab('adversarial')}
+                onClick={() => setActiveTab("adversarial")}
                 className={`px-4 py-2 text-[11px] font-bold border-r border-[#999] transition-colors ${
-                  activeTab === 'adversarial'
-                    ? 'bg-white text-[#003366] border-b-2 border-white -mb-[2px]'
-                    : 'bg-[#ccc] text-[#666] hover:bg-[#e0e0e0]'
+                  activeTab === "adversarial"
+                    ? "bg-white text-[#003366] border-b-2 border-white -mb-[2px]"
+                    : "bg-[#ccc] text-[#666] hover:bg-[#e0e0e0]"
                 }`}
               >
                 ADVERSARIAL
               </button>
               <button
-                onClick={() => setActiveTab('brainstorming')}
+                onClick={() => setActiveTab("brainstorming")}
                 className={`px-4 py-2 text-[11px] font-bold border-r border-[#999] transition-colors ${
-                  activeTab === 'brainstorming'
-                    ? 'bg-white text-[#003366] border-b-2 border-white -mb-[2px]'
-                    : 'bg-[#ccc] text-[#666] hover:bg-[#e0e0e0]'
+                  activeTab === "brainstorming"
+                    ? "bg-white text-[#003366] border-b-2 border-white -mb-[2px]"
+                    : "bg-[#ccc] text-[#666] hover:bg-[#e0e0e0]"
                 }`}
               >
                 BRAINSTORMING
               </button>
               <button
-                onClick={() => setActiveTab('handoff')}
+                onClick={() => setActiveTab("handoff")}
                 className={`px-4 py-2 text-[11px] font-bold transition-colors ${
-                  activeTab === 'handoff'
-                    ? 'bg-white text-[#003366] border-b-2 border-white -mb-[2px]'
-                    : 'bg-[#ccc] text-[#666] hover:bg-[#e0e0e0]'
+                  activeTab === "handoff"
+                    ? "bg-white text-[#003366] border-b-2 border-white -mb-[2px]"
+                    : "bg-[#ccc] text-[#666] hover:bg-[#e0e0e0]"
                 }`}
               >
                 HANDOFF
@@ -283,11 +289,13 @@ export default function Meanwhile() {
             <div className="grid grid-cols-2 bg-white">
               {/* Left: Code */}
               <div className="p-4 border-r border-[#ccc] overflow-x-auto bg-white">
-                <div className="text-[9px] font-bold text-[#666] mb-2 uppercase">Code</div>
-                
-                {activeTab === 'consensus' && (
+                <div className="text-[9px] font-bold text-[#666] mb-2 uppercase">
+                  Code
+                </div>
+
+                {activeTab === "consensus" && (
                   <pre className="text-[9px] font-mono leading-relaxed">
-{`facilitator := eng.Agent("Department Head").
+                    {`facilitator := eng.Agent("Department Head").
     Prompt(\`You're the department head who 
     runs budget meetings. Your job is to 
     facilitate discussion and drive the 
@@ -350,9 +358,9 @@ result, _ := eng.Run(ctx, sess.ID(),
                   </pre>
                 )}
 
-                {activeTab === 'adversarial' && (
+                {activeTab === "adversarial" && (
                   <pre className="text-[9px] font-mono leading-relaxed">
-{`proponent := eng.Agent("Innovation Champion").
+                    {`proponent := eng.Agent("Innovation Champion").
     Prompt(\`You're the VP of Innovation. You 
     champion bold new initiatives and believe
     in disrupting the status quo. You're 
@@ -404,9 +412,9 @@ result, _ := eng.Run(ctx, sess.ID(),
                   </pre>
                 )}
 
-                {activeTab === 'brainstorming' && (
+                {activeTab === "brainstorming" && (
                   <pre className="text-[9px] font-mono leading-relaxed">
-{`marketer := eng.Agent("Marketing Director").
+                    {`marketer := eng.Agent("Marketing Director").
     Prompt(\`You're the Marketing Director with
     15 years of experience in brand building.
     You think in terms of viral campaigns,
@@ -454,9 +462,9 @@ result, _ := eng.Run(ctx, sess.ID(),
                   </pre>
                 )}
 
-                {activeTab === 'handoff' && (
+                {activeTab === "handoff" && (
                   <pre className="text-[9px] font-mono leading-relaxed">
-{`manager := eng.Agent("Project Manager").
+                    {`manager := eng.Agent("Project Manager").
     Prompt(\`You're a seasoned Project Manager
     who keeps initiatives on-track, on-time,
     and on-budget. You coordinate between teams,
@@ -497,11 +505,13 @@ result, _ := eng.Run(ctx, sess.ID(),
 
               {/* Right: Result */}
               <div className="p-4 overflow-x-auto bg-[#fafafa]">
-                <div className="text-[9px] font-bold text-[#666] mb-2 uppercase">Output</div>
-                
-                {activeTab === 'consensus' && (
+                <div className="text-[9px] font-bold text-[#666] mb-2 uppercase">
+                  Output
+                </div>
+
+                {activeTab === "consensus" && (
                   <pre className="text-[9px] font-mono leading-relaxed text-[#333]">
-{`09:15:23 [Department Head] thinking...
+                    {`09:15:23 [Department Head] thinking...
 09:15:24 [Department Head] Alright team, we 
 need to address the Marketing printer 
 situation. I want everyone's input before 
@@ -546,9 +556,9 @@ Marketing pays 50% from their budget.`}
                   </pre>
                 )}
 
-                {activeTab === 'adversarial' && (
+                {activeTab === "adversarial" && (
                   <pre className="text-[9px] font-mono leading-relaxed text-[#333]">
-{`09:20:15 [Innovation Champion] thinking...
+                    {`09:20:15 [Innovation Champion] thinking...
 09:20:17 [Innovation Champion] Casual Friday
 isn't just about comfort—it's about culture!
 Companies like Google and Microsoft have 
@@ -595,9 +605,9 @@ This allows innovation while managing risk.`}
                   </pre>
                 )}
 
-                {activeTab === 'brainstorming' && (
+                {activeTab === "brainstorming" && (
                   <pre className="text-[9px] font-mono leading-relaxed text-[#333]">
-{`09:25:10 [CONCURRENT IDEATION BEGINS]
+                    {`09:25:10 [CONCURRENT IDEATION BEGINS]
 
 09:25:11 [Marketing Director] thinking...
 09:25:11 [Lead Developer] thinking...
@@ -639,9 +649,9 @@ marketing, technical, and business domains.`}
                   </pre>
                 )}
 
-                {activeTab === 'handoff' && (
+                {activeTab === "handoff" && (
                   <pre className="text-[9px] font-mono leading-relaxed text-[#333]">
-{`09:30:05 [Project Manager] thinking...
+                    {`09:30:05 [Project Manager] thinking...
 09:30:07 [Project Manager] We need a thorough
 compliance audit of our document management.
 This is specialized work, so I'm handing 
@@ -725,18 +735,22 @@ Audit complete. Report attached.`}
           {/* Technical Requirements Box */}
           <div className="border border-[#ccc] bg-[#fafafa] p-4 mb-6">
             <div className="text-[11px] text-[#555]">
-              <span className="font-bold text-[#333]">SYSTEM REQUIREMENTS:</span>{" "}
-              Go 1.24+ | OpenAI API Key | 64MB RAM (Minimum) | Internet Explorer 6.0+ or Netscape Navigator 8.0+
+              <span className="font-bold text-[#333]">
+                SYSTEM REQUIREMENTS:
+              </span>{" "}
+              Go 1.24+ | OpenAI API Key | 64MB RAM (Minimum) | Internet Explorer
+              6.0+ or Netscape Navigator 8.0+
             </div>
           </div>
 
           {/* Bottom Disclaimer */}
           <div className="text-[9px] text-gray-500 leading-normal border-t pt-4">
-            * Early bird access coming soon. Meanwhile is open source and free forever. 
-            This website is a parody of early 2000s corporate design. Results may vary. 
-            Side effects may include better agent collaboration, clearer code, and nostalgic 
-            feelings about dial-up internet. Not responsible for Y2K-related incidents. 
-            Dale from IT says hi.
+            * Early bird access coming soon. Meanwhile is open source and free
+            forever. This website is a parody of early 2000s corporate design.
+            Results may vary. Side effects may include better agent
+            collaboration, clearer code, and nostalgic feelings about dial-up
+            internet. Not responsible for Y2K-related incidents. Dale from IT
+            says hi.
           </div>
         </div>
 
@@ -745,6 +759,10 @@ Audit complete. Report attached.`}
           <div className="text-[11px] text-[#003366] font-bold mb-4 space-x-1">
             <a href="/" className="hover:underline">
               Home
+            </a>
+            <span className="text-gray-400">|</span>
+            <a href="/what-i-write" className="hover:underline">
+              What I Write
             </a>
             <span className="text-gray-400">|</span>
             <a

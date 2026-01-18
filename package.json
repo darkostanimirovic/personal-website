@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "parse-linkedin": "node scripts/parse-linkedin-feed.js",
+    "download-images": "node scripts/download-linkedin-images.js"
   },
   "dependencies": {
     "@types/next": "^8.0.7",
