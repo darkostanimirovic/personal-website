@@ -295,66 +295,87 @@ export default function Meanwhile() {
 
                 {activeTab === "consensus" && (
                   <pre className="text-[9px] font-mono leading-relaxed">
-                    {`facilitator := eng.Agent("Department Head").
-    Prompt(\`You're the department head who 
-    runs budget meetings. Your job is to 
-    facilitate discussion and drive the 
-    group toward consensus. You believe in 
-    collaborative decision-making and hate 
-    wasting company resources, but you also 
-    value team morale and fairness.\`).
-    Model("gpt-4o-mini").
+                    {`development := eng.Agent("Development").
+    Prompt(\`You're a senior software developer 
+    with years of experience building and 
+    shipping products.
+    
+    What you value:
+    - Team velocity and avoiding friction
+    - Developer experience and morale
+    - Pragmatic solutions over perfect ones
+    - Balancing speed with quality
+    
+    What frustrates you:
+    - Excessive process and bureaucracy
+    - Being blocked by approval chains
+    - Solutions that don't work in practice
+    
+    You're direct, practical, and protective 
+    of your team's ability to ship.\`).
     Build()
 
-finance := eng.Agent("CFO").
-    Prompt(\`You're the Chief Financial Officer.
-    Every dollar matters and you're laser-
-    focused on ROI and fiscal responsibility.
-    You keep detailed spreadsheets and you're
-    skeptical of any spending that doesn't
-    directly impact the bottom line. You've 
-    seen too many departments abuse equipment
-    budgets.\`).
-    Model("gpt-4o-mini").
+operations := eng.Agent("Operations").
+    Prompt(\`You're an operations lead responsible 
+    for keeping systems running and reliable.
+    
+    What you value:
+    - System stability and uptime
+    - Predictability and risk management
+    - Proper support and coverage
+    - Sustainable on-call practices
+    
+    What frustrates you:
+    - Avoidable incidents and firefighting
+    - Decisions made without considering 
+      operational impact
+    
+    You're direct, experienced, and focused 
+    on what actually works in production.\`).
     Build()
 
-itGuy := eng.Agent("Dale from IT").
-    Prompt(\`You're Dale, the IT support guy. 
-    You're tired of fixing printer jams and 
-    toner issues. You know exactly which 
-    departments break their equipment through
-    user error vs. actual hardware failure. 
-    You're straightforward, a bit cynical, 
-    but ultimately want to solve problems 
-    efficiently.\`).
-    Model("gpt-4o-mini").
+security := eng.Agent("Security").
+    Prompt(\`You're a security professional who 
+    believes in practical, effective security.
+    
+    What you value:
+    - Protecting users and data
+    - Security that actually gets followed
+    - Being collaborative vs obstructionist
+    - Real risk assessment over compliance
+    
+    What frustrates you:
+    - Being seen as "the no person"
+    - Security theater
+    - Being blamed for preventable issues
+    
+    You're pragmatic and work to find 
+    solutions that balance security with 
+    practicality.\`).
     Build()
 
-hr := eng.Agent("HR Director").
-    Prompt(\`You're the HR Director. You care 
-    about employee satisfaction and workplace
-    harmony. You've received complaints from
-    the department about printer access and
-    you want to ensure fair treatment. You
-    believe in giving people second chances 
-    but also accountability.\`).
-    Model("gpt-4o-mini").
+moderator := eng.Agent("Moderator").
+    Prompt(\`You're facilitating this discussion. 
+    Your job: keep things moving, highlight 
+    when people are talking past each other, 
+    ask clarifying questions when positions 
+    are vague, and nudge toward decisions.\`).
     Build()
 
-sess, _ := eng.Session("Printer Budget Meeting").
-    Participant(facilitator).
-    Participant(finance).
-    Participant(itGuy).
-    Participant(hr).
-    Protocol(protocol.Consensus(
-        protocol.WithConsensusFacilitator(facilitator),
+sess, _ := eng.Session("Friday Deployment Policy").
+    Participants(development, operations, security).
+    Facilitator(moderator).
+    Protocol(consensus.Consensus(
+        consensus.WithMaxRounds(5),
+        consensus.WithModeratorInterventions(
+            0.4, 0.7, 0.9),
     )).
     Start(ctx)
 
 result, _ := eng.Run(ctx, sess.ID(),
-    agent.User(\`Should we buy another printer 
-    for Marketing even though they've already 
-    broken two in the past 6 months?\`))`}
+    message.User(\`Should we allow prod releases 
+    on Fridays, or make Friday a no-deploy 
+    day?\`))`}
                   </pre>
                 )}
 
@@ -511,48 +532,113 @@ result, _ := eng.Run(ctx, sess.ID(),
 
                 {activeTab === "consensus" && (
                   <pre className="text-[9px] font-mono leading-relaxed text-[#333]">
-                    {`09:15:23 [Department Head] thinking...
-09:15:24 [Department Head] Alright team, we 
-need to address the Marketing printer 
-situation. I want everyone's input before 
-we decide.
+                    {`20:42:11 [Moderator] Welcome, everyone. 
+Today we're deciding on a clear policy: 
+should we allow production releases on 
+Fridays, or designate Friday as a no-deploy
+day? Let's keep this focused on principles,
+risk tolerance, and boundaries. This is a
+conversation, not three separate monologues
+—please respond to each other's points,
+challenge assumptions, and look for common
+ground.
 
-09:15:26 [CFO] thinking...
-09:15:28 [CFO] I've reviewed the budget. 
-Marketing has gone through TWO printers in 
-six months. At $800 each, that's $1,600. 
-We need accountability, not another blank 
-check.
+@Development, can you start us off?
 
-09:15:29 [Dale from IT] thinking...
-09:15:31 [Dale from IT] Look, the first one
-was a paper jam that turned into a toner 
-explosion because someone tried to "fix it"
-with a screwdriver. The second one? Someone
-printed 500 copies of a 40-page document on
-photo paper. User error, both times.
+20:42:16 [Development] I'm against a blanket
+no-deploy Friday rule. It's a process band-
+aid that often hides deeper issues: poor
+testing, weak rollback, or lack of ownership.
 
-09:15:33 [HR Director] thinking...
-09:15:35 [HR Director] I understand the 
-concerns, but Marketing is currently 
-walking to other departments to print. This
-affects their productivity and I've had 
-complaints about fairness. Maybe we need 
-better training rather than punishment?
+Principles I'd push:
+• We should be able to deploy any day if
+  risk is understood and controlled.
+• Fridays are fine for low-risk, well-
+  observed, quickly-revertible changes.
+• High-risk releases should avoid late
+  Friday by policy.
 
-09:15:37 [Department Head] thinking...
-09:15:39 [Department Head] I'm hearing valid
-points. Dale, can we provide a basic printer
-with training? CFO, what if Marketing covers
-half the cost from their budget?
+So: "no high-risk Friday releases after X
+time," not "no Friday deploys ever."
 
-09:15:41 [CFO] SIGNAL: conditional agreement
-09:15:42 [Dale from IT] SIGNAL: agreement
-09:15:43 [HR Director] SIGNAL: agreement
+20:42:20 [Operations] I get the "band-aid"
+concern, but from an ops standpoint, the
+question is who carries the risk when things
+go sideways at 6pm Friday.
 
-CONSENSUS REACHED: Buy a budget printer
-($400) with mandatory training session.
-Marketing pays 50% from their budget.`}
+Principle-wise:
+• Default should be no Friday prod deploys.
+• Exception only if: clear business-critical
+  need, proven low risk, and guaranteed on-
+  call + engineering coverage through the
+  weekend.
+
+If we can't reliably staff and support
+issues, we shouldn't be taking optional
+Friday risks.
+
+20:42:23 [Security] Operations, I'm aligned
+with your core concern: someone owns the
+blast radius at 6pm Friday.
+
+From a risk lens:
+• Default: no Friday discretionary prod
+  deploys.
+• Allow only when: (1) clearly time-
+  sensitive, (2) low complexity with fast
+  rollback, and (3) real coverage through
+  the weekend.
+
+Development is right that "never Friday"
+can hide deeper problems, but until we
+consistently meet those conditions, Friday
+should be the exception.
+
+[Moderator intervenes, highlighting the
+emerging alignment and asking for reactions
+to Security's framing...]
+
+20:42:56 [Development] Friday is a default
+no-deploy day: we do not plan Friday prod
+releases. Exceptionally, we may deploy on
+Friday only for time-critical changes with
+clear business/security urgency, with a
+named engineer on point, on-call coverage,
+fast rollback, and explicit acceptance of
+the risk by owning leadership.
+
+20:43:00 [Operations] ✓ Agrees
+That captures the core: Friday is not part
+of normal release planning, and any
+exception is a consciously accepted risk
+with named ownership and coverage.
+
+20:43:06 [Security] ✓ Agrees
+Treating Friday deploys as exceptional,
+consciously accepted risk with clear
+ownership matches the risk posture I was
+pushing for.
+
+20:43:15 [Development] ✓ Agrees
+The policy reflects the balance I care
+about: Friday isn't part of normal planning,
+but we keep a narrow, clearly owned escape
+hatch for true urgency.
+
+──────────────────────────────────────────
+
+CONSENSUS REACHED:
+
+Decision: Friday is a default no-deploy day;
+we do not plan Friday production releases.
+Friday deploys are rare, exceptional cases
+only for clearly time-critical business or
+security needs.
+
+Safeguards: Any Friday deploy requires
+explicit justification, named ownership,
+elevated scrutiny, confirmed support
+coverage, and leadership approval.`}
                   </pre>
                 )}
 
