@@ -25,6 +25,14 @@ export default function Home() {
                 Meanwhile
               </a>
               <span className="text-gray-300">|</span>
+              <a href="/my-ai-slop" className="hover:underline">
+                My AI Slop
+              </a>
+              <span className="text-gray-300">|</span>
+              <a href="/admin" className="hover:underline">
+                Admin CMS Login
+              </a>
+              <span className="text-gray-300">|</span>
               <a
                 href="mailto:darko.stanimirovic@gmail.com"
                 className="hover:underline"
@@ -41,7 +49,7 @@ export default function Home() {
         {/* Gray Bar */}
         <div className="bg-[#e4e4e4] border-y border-[#ccc] px-3 py-[6px] flex justify-between items-center h-[30px]">
           <span className="font-bold text-lg text-[#333] tracking-tight">
-            AI Product Manager Service
+            Darko Online Services · Product Division
           </span>
           <span className="text-sm text-[#333]">
             Need Help? Call{" "}
@@ -67,7 +75,7 @@ export default function Home() {
             {/* Content Side */}
             <div className="w-[40%] p-5 bg-white flex flex-col justify-center">
               <h2 className="text-xl font-bold text-[#333] mb-4 leading-tight">
-                Current Projects
+                Current Projects (Live & Loud)
               </h2>
               <ul className="space-y-2 text-[12px] text-[#444] font-bold">
                 <li className="flex items-start gap-2">
@@ -80,13 +88,15 @@ export default function Home() {
                     >
                       Meanwhile
                     </a>{" "}
-                    - The missing piece for <b>truly collaborative AI</b>
+                    - Collaboration-first agent runtime with protocols, worklogs,
+                    and real meeting energy
                   </span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-[#ccc] text-[8px] pt-[4px]">▪</span>
                   <span>
-                    Building <b>AI Design Studio</b>
+                    Building <b>AI Design Agency</b> for solo builders who want
+                    a real design system, not a moodboard
                   </span>
                 </li>
                 <li className="flex items-start gap-2">
@@ -250,6 +260,14 @@ export default function Home() {
             <span className="text-gray-400">|</span>
             <a href="/meanwhile" className="hover:underline">
               Meanwhile
+            </a>
+            <span className="text-gray-400">|</span>
+            <a href="/my-ai-slop" className="hover:underline">
+              My AI Slop
+            </a>
+            <span className="text-gray-400">|</span>
+            <a href="/admin" className="hover:underline">
+              Admin CMS Login
             </a>
             <span className="text-gray-400">|</span>
             <a href="#" className="hover:underline">

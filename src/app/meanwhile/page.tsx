@@ -29,6 +29,14 @@ export default function Meanwhile() {
                 What I Write
               </a>
               <span className="text-gray-300">|</span>
+              <a href="/my-ai-slop" className="hover:underline">
+                My AI Slop
+              </a>
+              <span className="text-gray-300">|</span>
+              <a href="/admin" className="hover:underline">
+                Admin CMS Login
+              </a>
+              <span className="text-gray-300">|</span>
               <a
                 href="mailto:darko.stanimirovic@gmail.com"
                 className="hover:underline"
@@ -849,6 +857,14 @@ Audit complete. Report attached.`}
             <span className="text-gray-400">|</span>
             <a href="/what-i-write" className="hover:underline">
               What I Write
+            </a>
+            <span className="text-gray-400">|</span>
+            <a href="/my-ai-slop" className="hover:underline">
+              My AI Slop
+            </a>
+            <span className="text-gray-400">|</span>
+            <a href="/admin" className="hover:underline">
+              Admin CMS Login
             </a>
             <span className="text-gray-400">|</span>
             <a
